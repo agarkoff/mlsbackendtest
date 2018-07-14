@@ -1,0 +1,20 @@
+<configuration>
+    <root level="ALL">
+        <appender class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%date{"yyyy-MM-dd HH:mm:ss,SSS"} [%thread] %-5level %logger{0}:%line - %m%n</pattern>
+            </encoder>
+        </appender>
+        <appender class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <immediateFlush>true</immediateFlush>
+            <encoder>
+                <pattern>%date{"HH:mm:ss,SSS"} [%thread] %-5level %logger{0}:%line - %m%n</pattern>
+            </encoder>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>D:/logs/debug.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>7</maxHistory>
+            </rollingPolicy>
+            <prudent>true</prudent>
+        </appender>
+    </root>
+</configuration>
