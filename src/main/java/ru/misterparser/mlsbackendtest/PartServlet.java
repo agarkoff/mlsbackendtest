@@ -38,7 +38,6 @@ public class PartServlet extends HttpServlet {
      */
     public static String buildHeaderUrl(PageContext pageContext, String column) {
         HttpServletRequest request = (HttpServletRequest) pageContext.getRequest();
-        String r = request.getContextPath();
         Map<String, String> map = new LinkedHashMap<>();
         Enumeration<String> parameterNames = request.getParameterNames();
         while (parameterNames.hasMoreElements()) {
@@ -51,7 +50,7 @@ public class PartServlet extends HttpServlet {
         map.put("sort", column);
         map.put("order", (String) pageContext.getRequest().getAttribute("order"));
         String q = map.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&"));
-        return r + "?" + q;
+        return "?" + q;
     }
 
     public void init() {

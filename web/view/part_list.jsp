@@ -33,7 +33,7 @@
     </style>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}" method="get" class="filter">
+<form method="get" class="filter">
     <input type="hidden" name="sort" value="${sort}">
     <input type="hidden" name="order" value="${order}">
     <input type="hidden" name="form" value="form">
