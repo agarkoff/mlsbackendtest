@@ -16,3 +16,5 @@ jdbc.password=root
 
 Выполните деплой файла mlsbackendtest-1.0-SNAPSHOT.war
 с помощью Tomcat Manager App по ссылке http://localhost:8080/manager/html
+
+На разработку было затрачено ~10 часов.
